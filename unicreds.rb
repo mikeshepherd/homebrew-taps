@@ -2,9 +2,9 @@ require 'formula'
 
 class Unicreds < Formula
   homepage 'https://github.com/versent/unicreds'
-  url 'https://github.com/Versent/unicreds/releases/download/v1.2.0/unicreds_1.2.0_darwin_x86_64.tgz'
-  version '1.2.0'
-  sha1 '13cf982f0c19837bf6d4cb835e348971318b5dd6'
+  url 'https://github.com/Versent/unicreds/releases/download/v1.2.1/unicreds_1.2.1_darwin_x86_64.tgz'
+  version '1.2.1'
+  sha1 'e31dc23f26ca01cb5f7d7ac4d401daf69ac96fcd'
 
   depends_on :arch => :x86_64
 
