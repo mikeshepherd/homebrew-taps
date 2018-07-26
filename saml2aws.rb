@@ -2,9 +2,9 @@ require 'formula'
 
 class Saml2aws < Formula
   homepage 'https://github.com/versent/saml2aws'
-  url 'https://github.com/Versent/saml2aws/releases/download/v2.6.1/saml2aws_2.6.1_darwin_amd64.tar.gz'
-  version '2.6.1'
-  sha256 '7fa6fbfc8096e99951cad0113271da5521c57af65a79802b30f59d740b05fd3b'
+  url 'https://github.com/Versent/saml2aws/releases/download/v2.7.0/saml2aws_2.7.0_darwin_amd64.tar.gz'
+  version '2.7.0'
+  sha256 '70e210cbe1ded47db7237a2dee0bc28eee393362563e357d3b6fe9429c3a2f6b'
 
   depends_on :arch => :x86_64
 
