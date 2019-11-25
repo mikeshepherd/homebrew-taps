@@ -2,7 +2,7 @@ require 'formula'
 
 class Saml2aws < Formula
   homepage 'https://github.com/versent/saml2aws'
-  version '2.19.0'
+  version '2.20.0'
   if OS.mac?
     url 'https://github.com/Versent/saml2aws/releases/download/v2.20.0/saml2aws_2.20.0_darwin_amd64.tar.gz'
     sha256 '63cf581085aeae961d3ec6a6ec59793dfff4691b73f9eacbd191058be8136a43'
