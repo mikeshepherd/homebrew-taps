@@ -4,11 +4,11 @@ class Saml2aws < Formula
   homepage 'https://github.com/versent/saml2aws'
   version '2.19.0'
   if OS.mac?
-    url 'https://github.com/Versent/saml2aws/releases/download/v2.19.0/saml2aws_2.19.0_darwin_amd64.tar.gz'
-    sha256 '775bcf7583d2293736c7bdb69a74dc32c6e8a999547a0628efb9e459fa32a907'
+    url 'https://github.com/Versent/saml2aws/releases/download/v2.20.0/saml2aws_2.20.0_darwin_amd64.tar.gz'
+    sha256 '63cf581085aeae961d3ec6a6ec59793dfff4691b73f9eacbd191058be8136a43'
   elsif OS.linux?
-    url 'https://github.com/Versent/saml2aws/releases/download/v2.19.0/saml2aws_2.19.0_linux_amd64.tar.gz'
-    sha256 'b64e0be3ba9fc398572f37f926cd8ef346eff7572c909eb450f759f371416506'
+    url 'https://github.com/Versent/saml2aws/releases/download/v2.20.0/saml2aws_2.20.0_linux_amd64.tar.gz'
+    sha256 '7ee441a596cdf2c460dd14f4f3e6fc99ac3e6b39409a492376f55421b9b9bc0d'
   end
 
   depends_on :arch => :x86_64
