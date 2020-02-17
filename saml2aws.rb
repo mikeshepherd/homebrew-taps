@@ -2,13 +2,13 @@ require 'formula'
 
 class Saml2aws < Formula
   homepage 'https://github.com/versent/saml2aws'
-  version '2.22.1'
+  version '2.23.0'
   if OS.mac?
-    url 'https://github.com/Versent/saml2aws/releases/download/v2.22.1/saml2aws_2.22.1_darwin_amd64.tar.gz'
-    sha256 '6eb89894abaff85fb7d36a7f8e960b0277f764149254961406c9ed0d86a911eb'
+    url 'https://github.com/Versent/saml2aws/releases/download/v2.23.0/saml2aws_2.23.0_darwin_amd64.tar.gz'
+    sha256 '1eb0d1bf701d4ef37c409441f07b1ef4b53b2de3851c99b27f90708ba17b45ba'
   elsif OS.linux?
-    url 'https://github.com/Versent/saml2aws/releases/download/v2.22.1/saml2aws_2.22.1_linux_amd64.tar.gz'
-    sha256 '03a70142417a34c9276cdc6f3cbb645c7f151387d32b0c3594bbd238a89190ee'
+    url 'https://github.com/Versent/saml2aws/releases/download/v2.23.0/saml2aws_2.23.0_linux_amd64.tar.gz'
+    sha256 '6cefaea1430e2ca0a1df4493c9f8ffe86436db826319998ff215c6331f0333dc'
   end
 
   depends_on :arch => :x86_64
