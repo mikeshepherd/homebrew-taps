@@ -1,7 +1,7 @@
 require "language/go"
 
 # Classname should match the name of the installed package.
-class saml2aws < Formula
+class Saml2aws < Formula
   desc "Utility to allow federated logins for the AWS CLI"
   homepage 'https://github.com/versent/saml2aws'
   version '2.27.1'
