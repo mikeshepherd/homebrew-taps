@@ -1,22 +1,37 @@
-require 'formula'
+require "language/go"
 
-class Saml2aws < Formula
+# Classname should match the name of the installed package.
+class Hostsfile < Formula
+  desc "Utility to allow federated logins for the AWS CLI"
   homepage 'https://github.com/versent/saml2aws'
   version '2.27.1'
-  if OS.mac?
-    url "https://github.com/Versent/saml2aws/releases/download/v#{version}/saml2aws_#{version}_darwin_amd64.tar.gz"
-    sha256 'a71477db0bf8d26d2b7fa2d656c280906959863901f4361e6f92a3dab2e8c06d'
-  elsif OS.linux?
-    url "https://github.com/Versent/saml2aws/releases/download/v#{version}/saml2aws_#{version}_linux_amd64.tar.gz"
-    sha256 'd4a58665b712a737e60215c2fb48a5dc18d9f7c35154babece7e4c5ab4574150'
-  end
+  head "https://github.com/mikeshepherd/saml2aws"
 
-  depends_on :arch => :x86_64
+  # Source code archive. Each tagged release will have one
+  url "https://github.com/mikeshepherd/saml2aws/archive/v2.27.1.zip"
+  sha256 "3c257bc2896b23a3e74af6d7d22d229c27be93928a3dce31878fe6c163f873c6"
+
+  depends_on "go" => :build
 
   def install
-    bin.install 'saml2aws'
+    ENV["GOPATH"] = buildpath
+
+
+    bin_path = buildpath/"src/github.com/mikeshepherd/saml2aws"
+    # Copy all files from their current location (GOPATH root)
+    # to $GOPATH/src/github.com/mikeshepherd/saml2aws
+    bin_path.install Dir["*"]
+
+    # Stage dependencies. This requires the "require language/go" line above
+    Language::Go.stage_deps resources, buildpath/"src"
+    cd bin_path do
+      # Install the compiled binary into Homebrew's `bin` - a pre-existing
+      # global variable
+      system "go", "build", "-o", bin/"saml2aws", "."
+    end
   end
 
+  # Homebrew requires tests.
   test do
     system "#{bin}/saml2aws"
   end
